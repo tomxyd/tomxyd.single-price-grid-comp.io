@@ -1,0 +1,89 @@
+@import "global";
+
+$card-color: hsl(179, 62%, 43%);
+$card-color-2: hsl(218, 22%, 67%);
+$button-color: hsl(71, 73%, 54%);
+$text-color-grey: hsl(204, 43%, 93%);
+
+.column {
+  width: 45%;
+  margin: 80px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  .col-1 {
+    flex: 1 1 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+
+    h3 {
+      color: $card-color;
+      letter-spacing: 0.05em;
+    }
+    h4 {
+      color: $button-color;
+      letter-spacing: 0.05em;
+    }
+    p {
+      $text-color-grey: rgba(109, 109, 109, 0.685);
+      color: $text-color-grey;
+    }
+  }
+  .col-2 {
+    flex: 1 1 50%;
+    background-color: $card-color;
+    border-bottom-left-radius: 4px;
+    color: white;
+    p .sub-time {
+      color: rgba(255, 255, 255, 0.571);
+      font-size: small;
+      font-weight: lighter;
+    }
+    button {
+      transition-duration: 0.1s;
+      width: 100%;
+      height: 40px;
+      background-color: $button-color;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+  .col-3 {
+    flex: 1 1 50%;
+    $card-color: hsl(179, 72%, 43%);
+    border-bottom-right-radius: 4px;
+    background-color: $card-color;
+    color: white;
+    P {
+      color: rgba(255, 255, 255, 0.571);
+      font-size: 12px;
+      line-height: 8px;
+    }
+  }
+}
+.column > * {
+  padding: 30px;
+}
+.bold-text {
+  font-size: xx-large;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+button:hover span {
+  color: black;
+}
+@media only screen and (max-width: 768px) {
+  .column {
+    flex-direction: column;
+    .col-2 {
+      border-radius: 0;
+    }
+    .col-3 {
+      border-bottom-left-radius: 4px;
+    }
+  }
+}

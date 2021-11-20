@@ -1,0 +1,17 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Karia, Arial;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(204, 43%, 93%);
+}
